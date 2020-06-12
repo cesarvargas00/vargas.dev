@@ -16,6 +16,13 @@ body {
   padding: 0 2em;
 }
 </style>
+<script>
+fetch('/twitter').then((response)=> response.json()).then(
+    (data) => {
+        document.getElementById('thought').innerHTML = data[0].text
+    }
+)
+</script>
 </head>
 <body>
 	<h1>&#x1F44B Hi,</h1>
@@ -26,7 +33,6 @@ body {
 	<br>.
 	<br>.
 	<br>.
-	<p>stop the killing, please.<b> RIP George Floyd </b>&#x270A&#x1F3FF. <a href="https://blacklivesmatters.carrd.co/">Make a difference</a></p>
+	<p id="thought"><a href="https://blacklivesmatters.carrd.co/">Make a difference</a></p>
 </body>
 </html>
-
