@@ -1,8 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head><title>  (ノಠ益ಠ)ノ彡┻━┻  </title>
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
 <meta charset="utf-8">
@@ -16,23 +17,26 @@ body {
   padding: 0 2em;
 }
 </style>
-<script>
-fetch('/twitter').then((response)=> response.json()).then(
-    (data) => {
-        document.getElementById('thought').innerHTML = data[0].text
-    }
-)
-</script>
 </head>
 <body>
 	<h1>&#x1F44B Hi,</h1>
-	<p>My name is <b>César Vargas</b> and I'm a software developer. I work @ <a href="https://oplab.com.br">oplab</a>.</p>
+  <p>My name is <b>César Vargas</b>, I'm a software developer/quant wannabe and I work @ <a href="https://oplab.com.br">oplab</a>.</p>
 	<p>If you want to talk, <a href="mailto:cesar@vargas.dev">mail me</a>.</p>
 	<p>Feel free to check out <a href="https://github.com/cesarvargas00">my code</a>.</p>
-	<p>Or <a href="#">go here</a> to read what I have to say.</p>
+	<p>Or <a href="https://twitter.com/cesarvargas00">go here</a> to read what I have to say.</p>
 	<br>.
 	<br>.
 	<br>.
-	<p id="thought"><a href="https://blacklivesmatters.carrd.co/">Make a difference</a></p>
+	<p><img src="images/Twitter_Logo_Blue.png" width="40px"></img><span id="thought">loading twitter...</span></p>
+  <br>.
+	<br>.
+	<br>.
+  <p>I also like to fiddle with <a href="finance.html">finance</a>.</p>
+  <script>
+  fetch('/twitter')
+    .then((response)=> response.json())
+    .then(data => document.getElementById('thought').innerHTML = data[0].text)
+  console.log('if you did not get it, this page is supposed to be minimalistic.')
+  </script>
 </body>
 </html>
