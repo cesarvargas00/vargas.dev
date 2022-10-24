@@ -27,16 +27,12 @@ body {
 	<br>.
 	<br>.
 	<br>.
-	<p><img src="images/Twitter_Logo_Blue.png" width="40px"></img><span id="thought">loading twitter...</span></p>
-  <br>.
+	<br>.
 	<br>.
 	<br>.
   <p>I also like to fiddle with <a href="finance.html">finance</a>.</p>
   <script>
-  fetch('/twitter')
-    .then((response)=> response.json())
-    .then(data => document.getElementById('thought').innerHTML = data[0].text)
-  console.log('if you did not get it, this page is supposed to be minimalistic.')
+  	console.log('if you did not get it, this page is supposed to be minimalistic.')
   </script>
 </body>
 </html>
